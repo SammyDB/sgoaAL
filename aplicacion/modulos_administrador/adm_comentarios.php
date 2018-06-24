@@ -109,6 +109,8 @@ if (@!$_SESSION['usuario']) {
                     echo '<tr class="warning">';
                     echo '<td>Comentario</td>';
                     echo '<td>Comentado por:</td>';
+                    echo '<td>Fecha:</td>';
+                    echo '<td>Image:</td>';
                     echo '</tr>';
                     //inicio carga de comentarios
                     $statement = "select * from comentario where id_objeto_aprendizaje=?";
