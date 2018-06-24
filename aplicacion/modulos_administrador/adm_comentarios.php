@@ -130,6 +130,7 @@ if (@!$_SESSION['usuario']) {
                                 $profesor = obtener_profesor_como_arreglo(obtener_id_profesor_con_id_usuario($comentario['idusuario']));
                                 echo '<td>' . $profesor['nombres'] . ' ' . $profesor['apellidos'] . '</td>';
                             }
+                            
                             echo '<td>' . $comentario['Imagen'] . '</td>';
                             echo '<td>' . $comentario['Fecha'] . '</td>';
                             echo '</tr>';
@@ -151,11 +152,6 @@ if (@!$_SESSION['usuario']) {
             <td colspan="2" align="center" bgcolor="skyblue"><input type="submit" name="enviar" value="Enviar"></td>
             </tr>
             </center></table>
-        </form>    
-        
-                        <button id="registrar" type="submit" class="btn btn-default">Comentar</button></br>
-                    </form>
-
                 </div>
             </div>
                      <br><br>
