@@ -109,28 +109,29 @@ if (@!$_SESSION['usuario']) {
                     echo '<tr class="warning">';
                     echo '<td>Comentario</td>';
                     echo '<td>Comentado por:</td>';
+                    echo '<td>Imagen:</td>';
                     echo '<td>Fecha:</td>';
-                    echo '<td>Image:</td>';
                     echo '</tr>';
-                    //inicio carga de comentarios
+                                        //inicio carga de comentarios
                     $statement = "select * from comentario where id_objeto_aprendizaje=?";
                     $conexion = new Conexion();
                     $consulta = $conexion->prepare($statement);
                     $consulta->setFetchMode(PDO::FETCH_ASSOC);
                     $consulta->execute([$id_objeto_aprendizaje]);
 
-
-
                     if ($consulta->rowCount() != 0) {
                         while ($comentario = $consulta->fetch()) {
                             echo '<tr class="success">';
                             echo '<td>' . $comentario['contenido'] . '</td>';
+                            
                             if (obtener_tipo_usuario_con_id($comentario['idusuario']) == 'ADM') {
                                 echo '<td>ADMINISTRADOR</td>';
                             } else {
                                 $profesor = obtener_profesor_como_arreglo(obtener_id_profesor_con_id_usuario($comentario['idusuario']));
                                 echo '<td>' . $profesor['nombres'] . ' ' . $profesor['apellidos'] . '</td>';
                             }
+                            echo '<td>' . $comentario['Imagen'] . '</td>';
+                            echo '<td>' . $comentario['Fecha'] . '</td>';
                             echo '</tr>';
                         }
                     }
@@ -143,12 +144,21 @@ if (@!$_SESSION['usuario']) {
                             <label for="contenido">Comentario:</label>
                             <textarea type="tex" class="form-control" id="contenido"  name="contenido" required></textarea>
                         </div>
-
+            <tr bgcolor="skyblue">
+            <td bgcolor="skyblue"><strong>Foto:</strong></td>  <td><input type="file" name="Foto" id="Foto"></td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center" bgcolor="skyblue"><input type="submit" name="enviar" value="Enviar"></td>
+            </tr>
+            </center></table>
+        </form>    
+        
                         <button id="registrar" type="submit" class="btn btn-default">Comentar</button></br>
                     </form>
 
                 </div>
             </div>
+                     <br><br>
         </div></br></br></br>
 
     <!-- begin wwww.htmlcommentbox.com -->
