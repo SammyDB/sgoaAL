@@ -154,7 +154,7 @@ if (@!$_SESSION['usuario']) {
                             }
                             echo '<td>' . $comentario['Imagen'] . '</td>';
                             echo '<td>' . $comentario['Fecha'] . '</td>';
-                             echo "<td><span class='glyphicon glyphicon-remove'></a></td>";
+                             echo "<td><onClick=\"javascript: return confirm('Realmente desea eliminar el objeto de aprendizaje?');\"span class='glyphicon glyphicon-remove'></a></td>";
 
                              echo '</tr>';
                         }
