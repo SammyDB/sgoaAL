@@ -155,7 +155,7 @@ if (@!$_SESSION['usuario']) {
                             }
                             echo '<td>' . $comentario['Imagen'] . '</td>';
                             echo '<td>' . $comentario['Fecha'] . '</td>';
-                             echo "<td><a onClick=\"javascript: return confirm('Realmente desea eliminar el profesor seleccionado? Se eliminarán los objetos de aprendizaje asociados al mismo');\" href='adm_buscar_profesores.php?id=" . $row['idUsuario'] . "&id_gestion=3'><span class='glyphicon glyphicon-remove'></a></td>";
+                             echo "<td><span class='glyphicon glyphicon-remove'></a></td>";
 
                              echo '</tr>';
                         }
@@ -187,7 +187,13 @@ if (@!$_SESSION['usuario']) {
             </div>
         </div></br></br></br>
 </br></br></br>
-        <footer class="container-fluid text-center">
+    <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24M1mHipf844J2rj8CtNSZr%2F"+"&opts=16862&num=10&ts=1529719762354");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+                <footer class="container-fluid text-center">
             <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
         </footer>
     </body>
