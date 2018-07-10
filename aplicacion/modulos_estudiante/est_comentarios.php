@@ -128,6 +128,9 @@ if (@!$_SESSION['usuario']) {
                     echo '<tr class="warning">';
                     echo '<td>Comentario</td>';
                     echo '<td>Comentado por:</td>';
+                    echo '<td>Imagen:</td>';
+                    echo '<td>Fecha:</td>';
+                    echo'<td>Eliminar:</td>';
                     echo '</tr>';
                     //inicio carga de comentarios
                     $statement = "select * from comentario where id_objeto_aprendizaje=?";
@@ -142,24 +145,54 @@ if (@!$_SESSION['usuario']) {
                         while ($comentario = $consulta->fetch()) {
                             echo '<tr class="success">';
                             echo '<td>' . $comentario['contenido'] . '</td>';
+                            
                             if (obtener_tipo_usuario_con_id($comentario['idusuario']) == 'ADM') {
                                 echo '<td>ADMINISTRADOR</td>';
                             } else {
                                 $profesor = obtener_profesor_como_arreglo(obtener_id_profesor_con_id_usuario($comentario['idusuario']));
                                 echo '<td>' . $profesor['nombres'] . ' ' . $profesor['apellidos'] . '</td>';
                             }
-                            echo '</tr>';
+                            echo '<td>' . $comentario['Imagen'] . '</td>';
+                            echo '<td>' . $comentario['Fecha'] . '</td>';
+                             echo "<td><span class='glyphicon glyphicon-remove'></a></td>";
+
+                             echo '</tr>';
                         }
                     }
                     echo '</table>';
                     ?>
                     
+                    <form action="../modulos_administrador/adm_ejecutar_comentar.php" method="post" enctype="multipart/form-data" >
+                        <input class="form-control" style="display: none;" value='<?php echo $id_objeto_aprendizaje ?>' name ="id_objeto_aprendizaje"> </input>
 
+                        <div class="form-group">
+                            <label for="contenido">Comentario:</label>
+                            <textarea type="tex" class="form-control" id="contenido"  name="contenido" required></textarea>
+                        </div>
+                        
+                                    <tr bgcolor="skyblue">
+            <td bgcolor="skyblue"><strong>Foto:</strong></td>  <td><input type="file" name="Foto" id="Foto"></td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center" bgcolor="skyblue"><input type="submit" name="enviar" value="Enviar"></td>
+            </tr>
+            </center></table>
                 </div>
             </div>
-        </div>
+                     <br><br>
+        </div></br></br></br>
+                    </form>
+                </div>
+            </div>
+        </div></br></br></br>
+</br></br></br>
+    <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24M1mHipf844J2rj8CtNSZr%2F"+"&opts=16862&num=10&ts=1529719762354");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
 
-        <footer class="container-fluid text-center">
+                <footer class="container-fluid text-center">
             <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
         </footer>
     </body>
