@@ -126,7 +126,7 @@ if (@!$_SESSION['usuario']) {
                     echo '<td>palabras clave</td>';
                     echo '<td>Tamaño</td>';
                     echo '<td>Autor</td>';
-                    echo '<td>Comentarios</td>';
+                   
                     //echo "<td>ruta</td>";
                     echo "</tr>";
 
