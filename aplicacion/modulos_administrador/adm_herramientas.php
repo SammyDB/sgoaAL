@@ -6,7 +6,7 @@ if (@!$_SESSION['usuario']) {
     //header("Location:index2.php");
     echo "eres estudiante";
 } elseif ($_SESSION['tipo_usuario'] == 'ADM') {
-    echo "eres estudiante";
+    echo "Eres Administrador";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -291,7 +291,7 @@ if (@!$_SESSION['usuario']) {
             <!-- --------------------------------------------- -->
 
             <footer class="container-fluid text-center">
-                <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+                <p>Diseño y programación: Samanta De La Cruz, Alex Morales, Cynthia Oyana</p>
             </footer>
             </script>
     </body>
