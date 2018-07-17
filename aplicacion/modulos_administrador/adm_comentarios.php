@@ -73,7 +73,7 @@ if (@!$_SESSION['usuario']) {
         <?php
         require_once '../clases_negocio/clase_conexion.php';
         require '../clases_negocio/funciones_oa_profesor.php';
-        $id_objeto_aprendizaje = filter_input(INPUT_GET, 'id');
+                $id_objeto_aprendizaje = filter_input(INPUT_GET, 'id');
         //extract($_GET);
         $objeto_de_aprendizaje = obtener_oa_como_arreglo($id_objeto_aprendizaje);
         ?>
@@ -111,6 +111,7 @@ if (@!$_SESSION['usuario']) {
                     echo '<td>Comentado por:</td>';
                     echo '<td>Imagen:</td>';
                     echo '<td>Fecha:</td>';
+                    
                     echo '</tr>';
                                         //inicio carga de comentarios
                     $statement = "select * from comentario where id_objeto_aprendizaje=?";
@@ -130,14 +131,15 @@ if (@!$_SESSION['usuario']) {
                                 $profesor = obtener_profesor_como_arreglo(obtener_id_profesor_con_id_usuario($comentario['idusuario']));
                                 echo '<td>' . $profesor['nombres'] . ' ' . $profesor['apellidos'] . '</td>';
                             }
-                            
                             echo '<td>' . $comentario['Imagen'] . '</td>';
                             echo '<td>' . $comentario['Fecha'] . '</td>';
-                            echo '</tr>';
+                            
+                             echo '</tr>';
                         }
                     }
                     echo '</table>';
                     ?>
+                    
                     <form action="../modulos_administrador/adm_ejecutar_comentar.php" method="post" enctype="multipart/form-data" >
                         <input class="form-control" style="display: none;" value='<?php echo $id_objeto_aprendizaje ?>' name ="id_objeto_aprendizaje"> </input>
 
@@ -157,6 +159,8 @@ if (@!$_SESSION['usuario']) {
                      <br><br>
         </div></br></br></br>
 
+        
+        
     <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
