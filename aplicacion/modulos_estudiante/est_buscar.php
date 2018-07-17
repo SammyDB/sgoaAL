@@ -145,6 +145,7 @@ if (@!$_SESSION['usuario']) {
                     echo '<td>Tamaño</td>';
                     echo '<td>Autor</td>';
                     echo '<td>Comentarios</td>';
+                    echo '<td>Calificacion</td>';
                     //echo "<td>ruta</td>";
                     echo "</tr>";
 
@@ -166,7 +167,16 @@ if (@!$_SESSION['usuario']) {
                                 echo '<td>' . $profesor['nombres'] . ' ' . $profesor['apellidos'] . '</td>';
                             }
                             //echo '<td>' . $row['ruta'] . '</td>';
-                            echo '<td><a href="est_comentarios.php?id='.$row['idobjeto_aprendizaje'].'">'. obtener_nro_comentarios_oa($row['idobjeto_aprendizaje']) . '</a></td>';                          
+                            echo '<td><a href="est_comentarios.php?id='.$row['idobjeto_aprendizaje'].'">'. obtener_nro_comentarios_oa($row['idobjeto_aprendizaje']) . '</a></td>';
+                            echo '<td>
+                             <div class="ec-stars-wrapper">
+	<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+	<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+	<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+	<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+	<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+</div>
+</td>';
                             echo '<td><a href="' . $row['ruta'] . '">Descargar</a></td>';
                             echo '</tr>';
                         }
