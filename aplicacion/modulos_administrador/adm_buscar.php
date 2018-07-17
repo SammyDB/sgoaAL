@@ -149,6 +149,7 @@ if (@!$_SESSION['usuario']) {
                             }
                             //echo '<td>' . $row['ruta'] . '</td>';
                             echo '<td><a href="adm_comentarios.php?id=' . $row['idobjeto_aprendizaje'] . '">' . obtener_nro_comentarios_oa($row['idobjeto_aprendizaje']) . '</a></td>';
+                            echo '<td><a href="adm_visualizar.php?id=' . $row['idobjeto_aprendizaje'] . '"><span class="glyphicon glyphicon-folder-open"></a></td>';
                             echo '<td><a href="adm_actualizar_oa.php?id=' . $row['idobjeto_aprendizaje'] . '"><span class="glyphicon glyphicon-refresh"></a></td>';
                             echo "<td><a onClick=\"javascript: return confirm('Realmente desea eliminar el objeto de aprendizaje?');\" href='adm_buscar.php?id=" . $row['idobjeto_aprendizaje'] . "&idborrar=2'><span class='glyphicon glyphicon-remove'></a></td>";
                             

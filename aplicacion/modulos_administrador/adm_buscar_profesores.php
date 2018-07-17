@@ -142,6 +142,13 @@ if (@!$_SESSION['usuario']) {
 
                             echo '</tr>';
                         }
+                         echo '</table>';
+                    extract($_GET);
+                    if (@$idborrar == 2) {
+                        eliminar_comentario($id);
+                        echo '<script>alert("REGISTRO ELIMINADO")</script> ';
+                        echo "<script>location.href='adm_buscar.php'</script>";
+                    }
                     }
                     echo '</table>';
                     $id_gestion = filter_input(INPUT_GET, 'id_gestion');
