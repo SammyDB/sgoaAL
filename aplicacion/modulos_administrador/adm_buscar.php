@@ -172,7 +172,8 @@ if (@!$_SESSION['usuario']) {
             </div>
         </div></br></br></br>
         <footer class="container-fluid text-center">
-            <p>Diseño y programación: Samantha De La Cruz, Alex Morales, Cynthia Oyana</p>
+            <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+                <p>Colaboración: Samantha De la Cruz, Cynthia Oyana, Alex Morales</p>
         </footer>
     </body>
 
