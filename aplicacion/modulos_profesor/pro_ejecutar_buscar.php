@@ -227,7 +227,7 @@ if (@!$_SESSION['usuario']) {
             </div>
         </div>
         <footer class="container-fluid text-center">
-            <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+            <p>Diseño y programación: Elsa Vasco, Edison Tamayo, kjshksajdhkasjhdskajdhaksjjdsakjdsakhJosé Criollo</p>
                 <p>Colaboración: Samantha De la Cruz, Cynthia Oyana, Alex Morales</p>
         </footer>
     </body>
