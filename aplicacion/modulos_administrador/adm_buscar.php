@@ -126,7 +126,7 @@ if (@!$_SESSION['usuario']) {
                     echo '<td>palabras clave</td>';
                     echo '<td>Tamaño</td>';
                     echo '<td>Autor</td>';
-                    echo '<td>Comentarios</td>';
+                   
                     //echo "<td>ruta</td>";
                     echo "</tr>";
 
@@ -174,6 +174,7 @@ if (@!$_SESSION['usuario']) {
         </div></br></br></br>
         <footer class="container-fluid text-center">
             <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+                <p>Colaboración: Samantha De la Cruz, Cynthia Oyana, Alex Morales</p>
         </footer>
     </body>
 

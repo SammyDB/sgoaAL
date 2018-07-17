@@ -168,6 +168,7 @@ if (@!$_SESSION['usuario']) {
 <!-- end www.htmlcommentbox.com -->
         <footer class="container-fluid text-center">
             <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+                <p>Colaboración: Samantha De la Cruz, Cynthia Oyana, Alex Morales</p>
         </footer>
     </body>
 

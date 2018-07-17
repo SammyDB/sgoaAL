@@ -2,9 +2,9 @@
 session_start();
 if (@!$_SESSION['usuario']) {
     header("Location:../../index.php");
-} elseif ($_SESSION['tipo_usuario'] == 'EST') {
+} elseif ($_SESSION['tipo_usuario'] == 'PRO') {
 //header("Location:index2.php");
-    echo "eres estudiante";
+    echo "eres Profesor";
 } elseif ($_SESSION['tipo_usuario'] == 'ADM') {
     echo "eres administrador";
 }
@@ -208,6 +208,7 @@ if (@!$_SESSION['usuario']) {
         </div>
         <footer class="container-fluid text-center">
             <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+                <p>Colaboración: Samantha De la Cruz, Cynthia Oyana, Alex Morales</p>
         </footer>
     </body>
 

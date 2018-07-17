@@ -50,7 +50,16 @@ function obtener_profesor_como_arreglo($id_profesor) {
         return null;
     }
 }
-
+function eliminar_comentario($id_comentario) {
+    $statement_del = "DELETE FROM comentario WHERE idcomentario=?";
+    $conexion_del = new Conexion();
+    $consulta_del = $conexion_del->prepare($statement_del);
+    if ($consulta_del->execute(array($id_comentario))) {
+        return true;
+    } else {
+        return false;
+    }
+}
 function obtener_nro_comentarios_oa($id_objeto_aprendizaje) {
     $conexion = new Conexion();
     $statement = 'select count(*) as nro_comentarios from objeto_aprendizaje as oa, comentario as c where oa.idobjeto_aprendizaje=c.id_objeto_aprendizaje and c.id_objeto_aprendizaje=?';
