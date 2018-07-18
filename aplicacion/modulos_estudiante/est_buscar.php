@@ -15,6 +15,7 @@ if (@!$_SESSION['usuario']) {
 
         <meta charset="utf-8"></meta>
         <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="../../estilos/hover.css"></link>
         <script type="text/javascript" src="../../plugins/bootstrap/js/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
         <title>Proyecto SGOA</title>
@@ -169,14 +170,14 @@ if (@!$_SESSION['usuario']) {
                             //echo '<td>' . $row['ruta'] . '</td>';
                             echo '<td><a href="est_comentarios.php?id='.$row['idobjeto_aprendizaje'].'">'. obtener_nro_comentarios_oa($row['idobjeto_aprendizaje']) . '</a></td>';
                             echo '<td>
-                             <div class="ec-stars-wrapper">
-	<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-	<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-	<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-	<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-	<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-</div>
-</td>';
+                                <div class="ec-stars-wrapper">
+                                    <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+                                    <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+                                    <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+                                    <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+                                    <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+                                </div>
+                            </td>';
                             echo '<td><a href="' . $row['ruta'] . '">Descargar</a></td>';
                             echo '</tr>';
                         }
