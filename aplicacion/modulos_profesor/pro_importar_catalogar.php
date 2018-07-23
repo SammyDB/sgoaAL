@@ -127,9 +127,65 @@ if (@!$_SESSION['usuario']) {
                         </div>
 
                         <div class="form-group">
-                            <label for="institucion">Institución:</label>
-                            <input type="text"  class="form-control" id="institucion" placeholder="Institución"  name="institucion" required>
-                        </div>
+                            <label for="institucion">Facultad:</label>
+                            
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Cargar Select a Partir de la seleccion de otro Select</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+            </nav>
+</header>
+<div id="contenedor">
+    <form>
+        <select id="Facultad" onchange="CargarMaterias(this.value);">
+            <option>-Selecciona una Facultad-</option>
+            <?php
+            require('conexion.php');
+            $query = 'SELECT * FROM facultad';
+            $result = mysqli_query($con, $query);
+            while($row = mysqli_fetch_array($result, MYSQL_ASSOC))
+            {
+                echo '<option value="' .$row["idfacultad"]. '">' .$row["facultad"]. '</option>';
+            }
+            mysqli_close($con);
+            ?>
+        </select>
+        <br style="clear:both;">
+            <p> </p>
+            <label for="Materia">Materias:</label>
+            
+                            
+        <select id="materia"></select>
+        <div id="respuesta"></div>
+
+
+<script>
+function CargarMaterias(val)
+{
+    $('#respuesta').html(" Por favor espera un momento");    
+    $.ajax({
+        type: "POST",
+        url: 'consulta.php',
+        data: 'idfacultad='+val,
+        success: function(resp){
+            $('#materia').html(resp);
+            $('#respuesta').html("");
+        }
+    });
+}
+
+</script>
+</form>
+</div>
+</body>
+</html>   
 
                         <div class="form-group">
                             <label for="palabras_claves">Palabras claves:</label>

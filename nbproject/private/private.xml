@@ -1,27 +1,13 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_administrador/adm_comentarios.php</file>
-            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_estudiante/est_comentarios.php</file>
-            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_administrador/adm_buscar_profesores.php</file>
-            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_administrador/adm_buscar.php</file>
-            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/pro_comentarios.php</file>
-            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/elimar_comentario.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/pro_ejecutar_insertar_oa.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/consulta.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/conexion.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/pro_importar_catalogar.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/clases_negocio/funciones_oa_profesor.php</file>
         </group>
     </open-files>
 </project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/sgoaAL/aplicacion/modulos_administrador/adm_buscar.php</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/sgoaAL/aplicacion/modulos_administrador/adm_actualizar_oa.php</file>
-        </group>
-    </open-files>
-</project-private>
->>>>>>> bdcc933c6b5b0e8f438561229883fe2825e540a2

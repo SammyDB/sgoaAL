@@ -111,7 +111,8 @@ if (@!$_SESSION['usuario']) {
                                     <option value="autor">autor</option>
                                     <option value="nombre">nombre</option>
                                     <option value="descripcion">descripcion</option>
-                                    <option value="institucion">institucion</option>
+                                    <option value="facultad">facultad</option>
+                                    <option value="materia">materia</option>
                                     <option value="palabras_clave">palabra clave</option>
                                 </select></br>
                             </div>
@@ -175,7 +176,8 @@ if (@!$_SESSION['usuario']) {
 	<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
 	<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
 	<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-</div>
+        
+
 </td>';
                             echo '<td><a href="' . $row['ruta'] . '">Descargar</a></td>';
                             echo '</tr>';
