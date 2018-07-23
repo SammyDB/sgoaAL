@@ -111,6 +111,11 @@ if (@!$_SESSION['usuario']) {
                         </div>
 
                         <div class="form-group">
+                            <label for="materia">Materia:</label>
+                            <input type="text"  class="form-control" id="materia" placeholder="Materia"  name="materia" required>
+                        </div>
+                        
+                        <div class="form-group">
                             <label for="palabras_claves">Palabras claves:</label>
                             <input type="text"  class="form-control" id="palabras_claves" placeholder="Palabras claves"  name="palabras_claves" required>
                         </div>
