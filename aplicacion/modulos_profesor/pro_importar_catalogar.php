@@ -162,7 +162,7 @@ if (@!$_SESSION['usuario']) {
             <label for="Materia">Materias:</label>
             
                             
-        <select id="materia"></select>
+            <select id="materia" size="2" multiple></select>
         <div id="respuesta"></div>
 
 
