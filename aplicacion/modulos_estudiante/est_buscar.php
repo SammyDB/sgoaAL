@@ -180,8 +180,7 @@ if (@!$_SESSION['usuario']) {
 	<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
         
 
-</td>';
-=======
+</td>
                                 <div class="ec-stars-wrapper">
                                     <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
                                     <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
@@ -190,7 +189,6 @@ if (@!$_SESSION['usuario']) {
                                     <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
                                 </div>
                             </td>';
->>>>>>> 28f0996d42d00e123361a955d908deaf2cf61ade
                             echo '<td><a href="' . $row['ruta'] . '">Descargar</a></td>';
                             echo '</tr>';
                         }
