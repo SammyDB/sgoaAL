@@ -126,7 +126,9 @@ if (@!$_SESSION['usuario']) {
                     echo '<td>palabras clave</td>';
                     echo '<td>Tamaño</td>';
                     echo '<td>Autor</td>';
-                   
+                    echo '<td>Comentario</td>';
+                    echo '<td>Calificacion</td>';
+                    
                     //echo "<td>ruta</td>";
                     echo "</tr>";
 
@@ -149,11 +151,17 @@ if (@!$_SESSION['usuario']) {
                             }
                             //echo '<td>' . $row['ruta'] . '</td>';
                             echo '<td><a href="adm_comentarios.php?id=' . $row['idobjeto_aprendizaje'] . '">' . obtener_nro_comentarios_oa($row['idobjeto_aprendizaje']) . '</a></td>';
-                            echo '<td><a href="adm_visualizar.php?id=' . $row['idobjeto_aprendizaje'] . '"><span class="glyphicon glyphicon-folder-open"></a></td>';
-                            echo '<td><a href="adm_actualizar_oa.php?id=' . $row['idobjeto_aprendizaje'] . '"><span class="glyphicon glyphicon-refresh"></a></td>';
-                            echo "<td><a onClick=\"javascript: return confirm('Realmente desea eliminar el objeto de aprendizaje?');\" href='adm_buscar.php?id=" . $row['idobjeto_aprendizaje'] . "&idborrar=2'><span class='glyphicon glyphicon-remove'></a></td>";
-                            
-                            echo '<td><a href="'.$row['ruta'].'">Descargar</a></td>';
+                            echo '<td><div class="ec-stars-wrapper">
+                                <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+                                <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+                                <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+                                <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+                                <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a></div>
+                            </td>';
+                            echo '<td><a href="adm_visualizar.php?id=' . $row['idobjeto_aprendizaje'] . '" title="Abrir"><span class="glyphicon glyphicon-folder-open"></a></td>';
+                            echo '<td><a href="adm_actualizar_oa.php?id=' . $row['idobjeto_aprendizaje'] . '" title="Actualizar"><span class="glyphicon glyphicon-refresh"></a></td>';
+                            echo '<td><a href="'.$row['ruta'].'" title="Descargar"><span class="glyphicon glyphicon-download"></a></td>';
+                            echo "<td><a onClick=\"javascript: return confirm('Realmente desea eliminar el objeto de aprendizaje?');\" href='adm_buscar.php?id=" . $row['idobjeto_aprendizaje'] . "&idborrar=2' ><span class='glyphicon glyphicon-remove'></a></td>";
                             echo '</tr>';
                         }
                     }
