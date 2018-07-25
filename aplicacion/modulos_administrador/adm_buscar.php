@@ -152,11 +152,11 @@ if (@!$_SESSION['usuario']) {
                             //echo '<td>' . $row['ruta'] . '</td>';
                             echo '<td><a href="adm_comentarios.php?id=' . $row['idobjeto_aprendizaje'] . '">' . obtener_nro_comentarios_oa($row['idobjeto_aprendizaje']) . '</a></td>';
                             echo '<td><div class="ec-stars-wrapper">
-                                <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-                                <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-                                <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-                                <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-                                <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a></div>
+                                <a href="#" data-value="1" title="Votar con 1 estrellas">1</a>
+                                <a href="#" data-value="2" title="Votar con 2 estrellas">2</a>
+                                <a href="#" data-value="3" title="Votar con 3 estrellas">3</a>
+                                <a href="#" data-value="4" title="Votar con 4 estrellas">4</a>
+                                <a href="#" data-value="5" title="Votar con 5 estrellas">5</a></div>
                             </td>';
                             echo '<td><a href="adm_visualizar.php?id=' . $row['idobjeto_aprendizaje'] . '" title="Abrir"><span class="glyphicon glyphicon-folder-open"></a></td>';
                             echo '<td><a href="adm_actualizar_oa.php?id=' . $row['idobjeto_aprendizaje'] . '" title="Actualizar"><span class="glyphicon glyphicon-refresh"></a></td>';
