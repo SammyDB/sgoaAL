@@ -6,7 +6,9 @@
             <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/pro_ejecutar_insertar_oa.php</file>
             <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/consulta.php</file>
             <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/conexion.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/clases_negocio/clase_conexion.php</file>
             <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/pro_importar_catalogar.php</file>
+            <file>file:/C:/wamp/www/sgoa/aplicacion/modulos_profesor/pro_buscar.php</file>
             <file>file:/C:/wamp/www/sgoa/aplicacion/clases_negocio/funciones_oa_profesor.php</file>
         </group>
     </open-files>

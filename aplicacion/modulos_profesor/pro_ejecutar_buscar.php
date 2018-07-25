@@ -111,7 +111,7 @@ if (@!$_SESSION['usuario']) {
                                 <option value="autor">autor</option>
                                 <option value="nombre">nombre</option>
                                 <option value="descripcion">descripcion</option>
-                                <option value="institucion">institucion</option>
+                                <option value="facultad">facultadn</option>
                                 <option value="palabras_clave">palabra clave</option>
                             </select></br>
                         </div>
@@ -143,7 +143,7 @@ if (@!$_SESSION['usuario']) {
                             $statement = 'select * from objeto_aprendizaje' . $clausula_where;
                             break;
                         case 'institucion':
-                            $clausula_where = ' where institucion like "%' . $valor_criterio . '%" order by institucion';
+                            $clausula_where = ' where facultad like "%' . $valor_criterio . '%" order by facultad';
                             $statement = 'select * from objeto_aprendizaje' . $clausula_where;
                             break;
                         case 'palabras_clave':
@@ -169,7 +169,7 @@ if (@!$_SESSION['usuario']) {
                     echo '<td>Nombre</td>';
                     echo '<td>Descripción</td>';
                     //echo '<td>idProfesor</td>';
-                    echo '<td>Institucion</td>';
+                    echo '<td>Facultad</td>';
                     echo '<td>FechaCreacion</td>';
                     echo '<td>palabras clave</td>';
                     echo '<td>Tamaño</td>';
@@ -185,7 +185,7 @@ if (@!$_SESSION['usuario']) {
                             echo '<td>' . $row['nombre'] . '</td>';
                             echo '<td>' . $row['descripcion'] . '</td>';
                             //echo '<td>' . $row['id_profesor'] . '</td>';
-                            echo '<td>' . $row['institucion'] . '</td>';
+                            echo '<td>' . $row['facultad'] . '</td>';
                             echo '<td>' . $row['fechaCreacion'] . '</td>';
                             echo '<td>' . $row['palabras_clave'] . '</td>';
                             echo '<td>' . number_format($row['tamanio'] / 1e6, 2, '.', '') . ' MB' . '</td>';

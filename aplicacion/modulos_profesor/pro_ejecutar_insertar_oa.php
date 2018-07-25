@@ -8,7 +8,8 @@ $almacenamiento = '../../storage/';
 $archivo = filter_input(INPUT_POST, 'archivo');
 $nombre = filter_input(INPUT_POST, 'nombre');
 $descripcion = filter_input(INPUT_POST, 'descripcion');
-$institucion = filter_input(INPUT_POST, 'institucion');
+$facultad = filter_input(INPUT_POST, 'facultad');
+$materia = filter_input(INPUT_POST, 'materia');
 $palabras_clave = filter_input(INPUT_POST, 'palabras_claves');
 //echo $nombre.'-----------'.$descripcion.'-----------'.$institucion.'---------'.$palabras_clave;
 $seGuardo_db = 0;
@@ -21,9 +22,9 @@ $target_file =$almacenamiento . urlencode($nombre). '.' . $ext;
  $id_usuario= $_SESSION['id'];
 
 $conexion = new Conexion();
-$statement = 'INSERT INTO objeto_aprendizaje (nombre,descripcion,id_usuario,institucion,palabras_clave,tamanio,ruta) VALUES (?, ?, ?, ?,?,?,?)';
+$statement = 'INSERT INTO objeto_aprendizaje (nombre,descripcion,id_usuario,facultad,palabras_clave,tamanio,ruta) VALUES (?, ?, ?, ?,?,?,?)';
 $consulta = $conexion->prepare($statement);
-if ($consulta->execute(array($nombre, $descripcion, $id_usuario, $institucion, $palabras_clave, $_FILES["archivo"]["size"], $target_file))) {
+if ($consulta->execute(array($nombre, $descripcion, $id_usuario, $facultad, $palabras_clave, $_FILES["archivo"]["size"], $target_file))) {
     $seGuardo_db = 1;
 } else {
     $seGuardo_db = 0;
@@ -57,7 +58,7 @@ if ($seGuardo_db == 1 && $seGuardo_sto==1) {
     echo '<script>alert("El objeto de aprendizaje se ha guardo correctamente.")</script> ';
     echo "<script>location.href='pro_importar_catalogar.php'</script>";
 } else {
-    echo '<script>alert("Error ineperado el objeto de aprendizaje no se ha guardado correctamente.")</script> ';
+    echo '<script>alert("Error inesperado el objeto de aprendizaje no se ha guardado correctamente.")</script> ';
     echo "<script>location.href='pro_importar_catalogar.php'</script>";
 }
 ?>
