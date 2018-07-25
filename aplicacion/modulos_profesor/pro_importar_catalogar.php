@@ -127,7 +127,7 @@ if (@!$_SESSION['usuario']) {
                         </div>
 
                         <div class="form-group">
-                            <label for="institucion">Facultad:</label>
+                            <label for="facultad">Facultad:</label>
                             
 <!DOCTYPE html>
 <html lang="es">

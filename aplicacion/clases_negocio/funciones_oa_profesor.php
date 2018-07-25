@@ -93,7 +93,7 @@ function obtener_oa_como_arreglo($id_objeto_aprendizaje) {
     }
 }
 
-function actualizar_oa($id_objeto_aprendizaje, $nombre, $descripcion, $institucion, $palabras_clave) {
+function actualizar_oa($id_objeto_aprendizaje, $nombre, $descripcion, $facultad, $palabras_clave) {
     //actualiazcion en storage
     $nombre_original = obtener_oa_como_arreglo($id_objeto_aprendizaje)['nombre'];
     $ruta_inicial = obtener_oa_como_arreglo($id_objeto_aprendizaje)['ruta'];
